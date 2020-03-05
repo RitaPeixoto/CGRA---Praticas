@@ -83,7 +83,7 @@ class MyTangram extends CGFobject {
 
         this.scene.translate( -Math.cos(Math.PI/4.0)+0.1,-4.0*Math.cos(Math.PI/4.0)+0.025,0);;
         this.scene.setDiffuse(255/255, 155/255, 0, 0);
-
+        this.scene.rotate(Math.PI/2.0,0,0,1);
         this.trianglebig.display();
         
         this.scene.popMatrix();
