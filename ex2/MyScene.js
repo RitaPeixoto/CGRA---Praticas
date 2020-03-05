@@ -22,10 +22,13 @@ class MyScene extends CGFscene {
         //Initialize scene objects
         this.axis = new CGFaxis(this);
         this.tangram = new MyTangram(this);
+        this.unitcube = new MyUnitCube(this);
 
         //Objects connected to MyInterface
         this.displayAxis = true;
         this.scaleFactor = 1;
+        this.displayTangram = true;
+        this.displayUnitCube = true;
     }
     initLights() {
         this.lights[0].setPosition(15, 2, 5, 1);
@@ -65,12 +68,31 @@ class MyScene extends CGFscene {
                     0.0, 0.0, this.scaleFactor, 0.0,
                     0.0, 0.0, 0.0, 1.0];
 
+
         this.multMatrix(sca);
 
+        this.pushMatrix();
+        //rotacao para ficar paralelo ao eixo XZ
+        this.rotate(-Math.PI/2.0,1,0,0);
+        //translacao para pôr o vertice superior esquerdo da base(7) na origem 
+        this.translate(4,-4+0.9,0);
+        
+        //colocar em cena o cubo e o tangram
+        this.pushMatrix();
+        this.translate(0,-0.9,0);//translaçao para alinhar com  tangram
+        this.scale(8,8,8);//resizing para ficar com o tamanho desejado
+        this.translate(0,0,-0.51);// ajustes
+        this.setDiffuse(128/255,128/255,128/255,0);//cor de fundo
 
+        if(this.displayUnitCube){
+            this.unitcube.display();
+        }
+        this.popMatrix();
+    
 
-        this.tangram.display();
-
+        if(this.displayTangram)
+            this.tangram.display();
+        this.popMatrix();
         // ---- END Primitive drawing section
     }
 }

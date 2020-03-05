@@ -29,126 +29,71 @@ class MyTangram extends CGFobject {
             0, 0, 0, 1];
 
         this.scene.multMatrix(rot);
+        this.scene.setDiffuse(0, 255/255, 0, 0);
         this.diamond.display();
         this.scene.popMatrix();
 
         //triangulo roxo
         this.scene.pushMatrix();
-        trans= [1, 0, 0, 0,
-            0, 1, 0, 0,
-            0, 0, 1, 0,
-            Math.cos(Math.PI/4.0)*3, 3*Math.cos(Math.PI/4.0), 0, 1];
-        this.scene.multMatrix(trans); 
+        
+        this.scene.translate(Math.cos(Math.PI/4.0)*3,Math.cos(Math.PI/4.0)*3,0);
+        this.scene.rotate(3*Math.PI/4.0,0,0,1);
+        this.scene.setDiffuse(150/255, 80/255, 190/255, 0);
 
-        
-        rot =[Math.cos(3*Math.PI/4.0), Math.sin(3*Math.PI/4.0), 0, 0,
-            -Math.sin(3*Math.PI/4.0), Math.cos(3*Math.PI/4.0), 0, 0,
-            0, 0, 1, 0,
-            0, 0, 0, 1];
-        
-        this.scene.multMatrix(rot);
- 
         this.trianglesmall.display();
+
         this.scene.popMatrix();
 
         //triangulo vermelho
         this.scene.pushMatrix();
-        trans= [1, 0, 0, 0,
-            0, 1, 0, 0,
-            0, 0, 1, 0,
-            Math.cos(Math.PI/4.0),Math.cos(Math.PI/4.0), 0, 1];
-        this.scene.multMatrix(trans); 
 
-        
-        rot =[Math.cos(Math.PI/4.0), Math.sin(Math.PI/4.0), 0, 0,
-            -Math.sin(Math.PI/4.0), Math.cos(Math.PI/4.0), 0, 0,
-            0, 0, 1, 0,
-            0, 0, 0, 1];
-        
-        this.scene.multMatrix(rot);
+        this.scene.translate( Math.cos(Math.PI/4.0), Math.cos(Math.PI/4.0),0);
+        this.scene.rotate(Math.PI/4.0,0,0,1);
+        this.scene.setDiffuse(255/255, 27/255, 27/255, 0);
 
         this.trianglesmall.display();
+
         this.scene.popMatrix();
 
         //triangulo rosa  
         this.scene.pushMatrix();
-        trans= [1, 0, 0, 0,
-            0, 1, 0, 0,
-            0, 0, 1, 0,
-            2*Math.cos(Math.PI/4.0),0, 0, 1];
-        this.scene.multMatrix(trans); 
 
-        
-        rot =[Math.cos(-Math.PI/4.0), Math.sin(-Math.PI/4.0), 0, 0,
-            -Math.sin(-Math.PI/4.0), Math.cos(-Math.PI/4.0), 0, 0,
-            0, 0, 1, 0,
-            0, 0, 0, 1];
-        
-        this.scene.multMatrix(rot);
+        this.scene.translate(2*Math.cos(Math.PI/4.0),0,0);
+        this.scene.rotate(-Math.PI/4.0,0,0,1);
+        this.scene.setDiffuse(255/255, 155/255, 207/255, 0);
 
         this.triangle.display();
+
         this.scene.popMatrix();
         
         //Paralelograma amarelo
         this.scene.pushMatrix();
-        trans = [1, 0, 0, 0,
-            0, 1, 0, 0,
-            0, 0, 1, 0,
-            Math.cos(Math.PI/4.0)*2.0, -Math.cos(Math.PI/4.0)*4.0, 0, 1];
- 
-        this.scene.multMatrix(trans);
- 
-           
-        rot = [Math.cos(3*Math.PI/4.0), Math.sin(3*Math.PI/4.0), 0, 0,
-            -Math.sin(3*Math.PI/4.0), Math.cos(3*Math.PI/4.0), 0, 0,
-            0, 0, 1, 0,
-            0, 0, 0, 1];
-        this.scene.multMatrix(rot);
-       var sca = [1, 0, 0, 0,
-            0, -1, 0, 0,
-            0, 0, 1, 0,
-             0, 0, 0, 1]
-      this.scene.multMatrix(sca);
-        
+
+        this.scene.translate(Math.cos(Math.PI/4.0)*2.0,-Math.cos(Math.PI/4.0)*4.0,0);
+        this.scene.rotate(3*Math.PI/4.0,0,0,1);
+        this.scene.scale(1,-1,1); 
+        this.scene.setDiffuse(255/255, 255/255, 0, 0);
+
         this.parallelogram.display();
+
         this.scene.popMatrix();
 
         //triangulo laranja
         this.scene.pushMatrix();
-        trans= [1, 0, 0, 0,
-            0, 1, 0, 0,
-            0, 0, 1, 0,
-            -Math.cos(Math.PI/4.0)+0.1,-4.0*Math.cos(Math.PI/4.0)+0.025, 0, 1];
-        this.scene.multMatrix(trans);
 
-        
-        rot =[Math.cos(Math.PI/2.0), Math.sin(Math.PI/2.0), 0, 0,
-            -Math.sin(Math.PI/2.0), Math.cos(Math.PI/2.0), 0, 0,
-            0, 0, 1, 0,
-            0, 0, 0, 1];
-        
-        this.scene.multMatrix(rot);
+        this.scene.translate( -Math.cos(Math.PI/4.0)+0.1,-4.0*Math.cos(Math.PI/4.0)+0.025,0);;
+        this.scene.setDiffuse(255/255, 155/255, 0, 0);
 
         this.trianglebig.display();
         
         this.scene.popMatrix();
 
         //triangulo azul
+
         this.scene.pushMatrix();
-        trans= [1, 0, 0, 0,
-            0, 1, 0, 0,
-            0, 0, 1, 0,
-            -Math.cos(Math.PI/4.0)+0.1,-4.0*Math.cos(Math.PI/4.0)+0.025, 0, 1];
-        this.scene.multMatrix(trans);
-
-        
-        rot =[Math.cos(-Math.PI/2.0), Math.sin(-Math.PI/2.0), 0, 0,
-            -Math.sin(-Math.PI/2.0), Math.cos(-Math.PI/2.0), 0, 0,
-            0, 0, 1, 0,
-            0, 0, 0, 1];
-        
-        this.scene.multMatrix(rot);
-
+        this.scene.translate(-Math.cos(Math.PI/4.0)+0.1,-4.0*Math.cos(Math.PI/4.0)+0.025,0);
+        this.scene.rotate(-Math.PI/2.0,0,0,1);
+        this.scene.setDiffuse(0, 155/255, 255/255, 0);
 
         this.trianglebig.display();
         
