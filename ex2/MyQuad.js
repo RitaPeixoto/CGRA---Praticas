@@ -20,7 +20,7 @@ class MyQuad extends CGFobject {
 		this.indices = [
 			0, 1, 2,
             2, 3, 0
-		];
+		]; 	
 
 		//The defined indices (and corresponding vertices)
 		//will be read in groups of three to draw triangles
