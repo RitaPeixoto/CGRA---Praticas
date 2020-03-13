@@ -127,7 +127,7 @@ class MyScene extends CGFscene {
         //Wood color (low specular)
         this.wood = new CGFappearance(this);
         this.wood.setAmbient(0.0, 0.0, 0.0, 1.0);
-        this.wood.setDiffuse(0.75, 0.60, 0.42, 1.0);
+        this.wood.setDiffuse(0.76, 0.60, 0.42, 1.0);
         this.wood.setSpecular(0.1, 0.1, 0.1, 1.0);
         this.wood.setShininess(20.0);
 
