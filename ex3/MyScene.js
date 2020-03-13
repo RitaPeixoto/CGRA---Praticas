@@ -37,7 +37,7 @@ class MyScene extends CGFscene {
         this.selectedObject = 0;
         this.selectedMaterial = 0;
         this.displayAxis = true;
-        this.displayNormals = false;
+        this.displayNormals = true;
         this.objectComplexity = 0.5;
         this.scaleFactor = 2.0;
         this.ambientLight = 0.25;
@@ -144,10 +144,6 @@ class MyScene extends CGFscene {
     }
     display() {
         this.setGlobalAmbientLight(this.ambientLight, this.ambientLight, this.ambientLight,1.0);
-
-
-
-
         // ---- BEGIN Background, camera and axis setup
         // Clear image and depth buffer everytime we update the scene
         this.gl.viewport(0, 0, this.gl.canvas.width, this.gl.canvas.height);
