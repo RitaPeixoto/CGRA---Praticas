@@ -21,7 +21,7 @@ class MyInterface extends CGFinterface {
         this.gui.add(this.scene, 'displayQuad').name('Display Quad');
         this.gui.add(this.scene, 'displayTangram').name('Display Tangram');
         this.gui.add(this.scene,'displayquadMaterial').name('Quad Material')
-
+        this.gui.add(this.scene,'displayUnitCube').name('Unit Cube')
         //Dropdown for textures
         this.gui.add(this.scene, 'selectedTexture', this.scene.textureIds).name('Selected Texture').onChange(this.scene.updateAppliedTexture.bind(this.scene));
         //Dropdown for wrapping (S)
