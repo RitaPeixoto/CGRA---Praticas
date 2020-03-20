@@ -34,6 +34,12 @@ class MyTriangleSmall extends CGFobject {
 			0,0,-1,
 			0,0,-1
 		];
+		this.texCoords=[
+			0,1,
+			1,1,
+			0,0,
+			1,0
+		];
 
 		//The defined indices (and corresponding vertices)
 		//will be read in groups of three to draw triangles
