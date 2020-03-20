@@ -47,8 +47,8 @@ class MyTangram extends CGFobject {
             0, 0, 0, 1];
 
         this.scene.multMatrix(rot);
-       // this.green.apply(); // point 5
-        this.diamond.display();//point 6
+       // this.green.apply();
+        this.diamond.display();
         this.scene.popMatrix();
 
 

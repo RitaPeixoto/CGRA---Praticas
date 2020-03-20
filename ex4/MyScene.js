@@ -49,6 +49,7 @@ class MyScene extends CGFscene {
         this.displayquadMaterial = false; 
         this.displayTangram = false;
         this.displayUnitCube = false;
+        this.nearestFilter = false;
         this.scaleFactor = 5;
         this.selectedTexture = -1;        
         this.wrapS = 0;

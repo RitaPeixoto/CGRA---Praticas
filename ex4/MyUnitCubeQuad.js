@@ -39,9 +39,14 @@ class MyUnitCubeQuad extends CGFobject {
 
     }
 	display() {
+        this.side.apply();
+        if(this.scene.nearestFilter)
+            this.scene.gl.texParameteri(this.scene.gl.TEXTURE_2D, this.scene.gl.TEXTURE_MAG_FILTER, this.scene.gl.NEAREST);
+        else
+            this.scene.gl.texParameteri(this.scene.gl.TEXTURE_2D, this.scene.gl.TEXTURE_MAG_FILTER, this.scene.gl.LINEAR);
 
-        // Face da direita
-        this.side.apply();	
+
+        // Face da direita	
         this.scene.pushMatrix();
         this.scene.translate(0.5, 0, 0);
         this.scene.rotate(Math.PI / 2, 0, 1, 0);
@@ -49,7 +54,6 @@ class MyUnitCubeQuad extends CGFobject {
 		this.scene.popMatrix();
 		
         // Face de trás
-        this.side.apply();
         this.scene.pushMatrix();
         this.scene.translate(0, 0, -0.5);
         this.scene.rotate(Math.PI, 0, 1, 0);
@@ -57,7 +61,6 @@ class MyUnitCubeQuad extends CGFobject {
         this.scene.popMatrix();
 
         // Face da esquerda
-        this.side.apply();
         this.scene.pushMatrix();
         this.scene.translate(-0.5, 0, 0);
         this.scene.rotate(-Math.PI / 2, 0, 1, 0);
@@ -65,7 +68,6 @@ class MyUnitCubeQuad extends CGFobject {
         this.scene.popMatrix();
 
         // Face da frente
-        this.side.apply();
         this.scene.pushMatrix();
         this.scene.translate(0, 0, 0.5);
         this.quad.display();
@@ -73,6 +75,10 @@ class MyUnitCubeQuad extends CGFobject {
 		
         // Face de cima
         this.top.apply();
+        if(this.scene.nearestFilter)
+            this.scene.gl.texParameteri(this.scene.gl.TEXTURE_2D, this.scene.gl.TEXTURE_MAG_FILTER, this.scene.gl.NEAREST);
+        else
+            this.scene.gl.texParameteri(this.scene.gl.TEXTURE_2D, this.scene.gl.TEXTURE_MAG_FILTER, this.scene.gl.LINEAR);
         this.scene.pushMatrix();
         this.scene.translate(0, 0.5, 0);
         this.scene.rotate(-Math.PI / 2, 1, 0, 0);
@@ -81,6 +87,10 @@ class MyUnitCubeQuad extends CGFobject {
 
         // Face de baixo
         this.bottom.apply();
+        if(this.scene.nearestFilter)
+            this.scene.gl.texParameteri(this.scene.gl.TEXTURE_2D, this.scene.gl.TEXTURE_MAG_FILTER, this.scene.gl.NEAREST);
+        else
+            this.scene.gl.texParameteri(this.scene.gl.TEXTURE_2D, this.scene.gl.TEXTURE_MAG_FILTER, this.scene.gl.LINEAR);
         this.scene.pushMatrix();
         this.scene.translate(0, -0.5, 0);
         this.scene.rotate(Math.PI / 2, 1, 0, 0);
