@@ -18,8 +18,6 @@ void main() {
 	
 	vTextureCoord = aTextureCoord;
 
-
-
 	offset[0]=normScale*0.1*sin(timeFactor);//tip
 	gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition+offset, 1.0);
 }
