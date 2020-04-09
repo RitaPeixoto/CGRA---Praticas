@@ -24,9 +24,9 @@ uniform lightProperties uLight[NUMBER_OF_LIGHTS];
 
 void main() {
 	if (coords.y > 0.5)
-		gl_FragColor = vec4(0.6,0.6,0.9, 1.0) * uLight[0].diffuse;
+		gl_FragColor =  vec4(0.898, 0.8941, 0, 1.0) * uLight[0].diffuse;	
 	else
 	{
-		gl_FragColor =  vec4(0.9,0.89,0.0, 1.0) * uLight[0].diffuse;
+		gl_FragColor =  vec4(0.537, 0.537, 0.89, 1.0) * uLight[0].diffuse;	
 	}
 }
