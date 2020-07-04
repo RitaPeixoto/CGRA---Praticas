@@ -252,7 +252,7 @@ class ShaderScene extends CGFscene {
 			this.popMatrix();
 		}
 
-		// restore default shader (will be needed for drawing the axis in next frame)
-		this.setActiveShader(this.defaultShader);
+			// restore default shader (will be needed for drawing the axis in next frame)
+			this.setActiveShader(this.defaultShader);
 	}
 }
