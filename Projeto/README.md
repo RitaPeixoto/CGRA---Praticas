@@ -9,6 +9,6 @@
 
 ## Trabalho realizado com:
  
- * Mariana Truta
+ * Mariana Truta (@mariana1412)
 
 
